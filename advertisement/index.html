@@ -1,0 +1,58 @@
+<html>
+    <!-- Test file for the jqMobi advertisement plugin -->
+    <link rel="stylesheet" type="text/css" href="./css/jq.advertisement.css" />
+    <style type="text/css">
+        .my-text-advert {
+            background-color: navy;
+            color: white;
+            font: 20px bold georgia,times,serif;
+            text-align:center;
+            padding:20px;
+            margin: 0 20px 20px 0;
+            float:left;
+            clear:none;
+        }
+    </style>
+    <script src="http://www.jqmobi.com/testdrive/jq.mobi.min.js"></script>
+    <script src="jq.advertisement.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Illustration of a raw html ad with the "prepend" mode in which it's simply added to the content in the desired
+            // place. This is example is a piece of text, but it could easily be a div containing some inline Javascript
+            //  to fetch the ad from an ad server somewhere.
+            $('#content').advertisement({
+                mode: 'prepend',
+                width: 240,
+                height: 80,
+                cssclass: 'my-text-advert',
+                rawhtml: "Here is a sample text ad",
+                targeturl: 'http://www.example.com'
+            });
+            // Illustration of an image ad with the full page mode, in which the ad is shown as a modal screen, which the user
+            // may only close after a timeout.
+            $('#fullpage').advertisement({
+                mode: 'fullpage',
+                timeout: 4,
+                width: 300,
+                height: 250,
+                artwork: 'sample.jpg',
+                targeturl: 'http://www.example.com',
+                htmlid: 'fullpagead'
+            })
+        });
+    </script>
+    <body>
+        <div id="content">
+            Bacon ipsum dolor sit amet filet mignon brisket tenderloin jerky ham hock. Strip steak beef ribs meatball, pancetta spare ribs tri-tip ground round pork belly biltong short loin tongue jerky andouille. Swine turducken boudin doner chuck beef venison, pig kielbasa drumstick turkey. Drumstick turducken jowl jerky, turkey biltong flank short loin spare ribs. Beef strip steak shoulder, meatball venison beef ribs pastrami short ribs andouille ribeye salami boudin swine spare ribs meatloaf. Ham hock t-bone ham salami rump cow beef ribs pork belly jerky ribeye ground round.
+
+            Cow tri-tip ball tip strip steak turkey venison. Drumstick ground round doner capicola. Pork loin ham hock corned beef, brisket leberkas pancetta filet mignon. Pig ham hock shankle strip steak sausage swine pork chop capicola turkey.
+
+            Fatback leberkas strip steak, frankfurter boudin capicola short loin spare ribs ham bresaola shankle andouille tenderloin ground round sausage. Ball tip andouille pork belly, tri-tip frankfurter leberkas pork ground round kielbasa t-bone drumstick ham hock rump shoulder. Strip steak shoulder hamburger salami, fatback pork belly pork tri-tip corned beef biltong meatloaf bacon. Ribeye swine pork chop spare ribs kielbasa, pork loin pastrami pig meatloaf turducken beef shoulder ground round pork. Spare ribs pastrami fatback doner drumstick, hamburger corned beef jerky shank chicken. Pancetta beef jerky meatloaf turkey.
+
+            Tri-tip ham hock turducken, tongue corned beef capicola pork chop turkey flank pork belly boudin short ribs brisket. Corned beef ground round sirloin tail. Short loin shank turducken pork loin sausage ham ribeye tri-tip sirloin andouille flank ball tip. Meatloaf leberkas pancetta, pork doner tongue biltong ground round filet mignon tri-tip shankle corned beef jowl. Tongue tenderloin capicola biltong chicken shank, pork belly ham hock flank pork frankfurter pancetta. Short ribs chicken ribeye tenderloin capicola hamburger, doner jerky strip steak leberkas drumstick.
+
+            Turkey pork loin sausage fatback brisket. Salami tenderloin chuck chicken pork, leberkas tri-tip filet mignon drumstick brisket doner turkey. Shank frankfurter pork belly, brisket doner rump turkey pancetta. Sirloin shank ribeye beef. Bresaola turkey shoulder filet mignon pig pork. Meatloaf filet mignon ham hock turducken chicken drumstick frankfurter boudin shoulder capicola ham ball tip salami bresaola beef. Pork loin ball tip corned beef, salami bacon chuck shoulder boudin ground round.
+        </div>
+        <div id="fullpage"></div>
+    </body>
+</html>
