@@ -6,54 +6,23 @@ This plugin helps you display advertisements on your page. It permits you to spe
 raw html (useful for Adsense and similar script-based ad providers), and supports a full page mode in which the ad takes over
 the screen, permitting the user to close it after a timeout has expired, which is displayed to the user.
 
-```html
-<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-```
 
 # Using
 
 To use this, call .advertisement on a jqMobi collection. The available options are documented in the jq.advertisement.js
-source file.
+source file. Here is an example of creating a simple image ad which is frozen for 4 seconds:
 
 
 ```js
 $(document).ready(function(){
-   $("#placeholder").advertisement({options});
+    $('#fullpage').advertisement({
+        mode: 'fullpage',
+        timeout: 4,
+        artwork: 'sample.jpg',
+        targeturl: 'http://www.example.com'
+    });
 });
 ```
-
-#Retreiving the Google maps object
-
-To get a google maps object that you can interact with, call the gmaps function with no parameters.  You must create the map before hand.
-
-```js
-var myMap=$("#maps").gmaps();
-```
-
-#Triggering a resize command
-
-To trigger a resize  command
-
-```js
-$("#maps").gmaps('resize');
-```
-
-#Using in jqUi
-
-If you are using this in jqUi, you need to trigger a resize when the panel is loaded.
-
-```html
-<div id="maps" title="Maps" class="panel" data-load="resizeMap">
-
-</div>
-```
-
-```js
-function resizeMap(){
-    $("#maps").gmaps("resize");
-}
-```
-
 
 # Bugs
 
