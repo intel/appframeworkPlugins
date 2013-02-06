@@ -1,0 +1,23 @@
+.ad-closelink, .ad-countdown {
+    color: white;
+    text-decoration: none;
+}
+.ad-closewrapper {
+    display:block;
+    padding-top:8px;
+    height:32px;
+    width:100px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:14px;
+    text-align:center;
+}
+.ad-fullpage {
+    position:fixed !important;
+    top:0 !important;
+    left:0 !important;
+    background-color:black !important;
+    color:white !important;
+    z-index:99999 !important;
+}
+
