@@ -58,12 +58,12 @@
       this.container.parent().find(".subpanelNav a").data("ignore", "true"); //Set data ignore so the main click handler doesn't process it
       this.container.find("div.insetPanel").forEach(function(obj) {
         if ($(obj).attr("scrolling") == "no") return;
-        console.log("Adding a scroller ");
         scrollers[obj.id] = $(obj).scroller({
           scrollBars: true,
           verticalScroll: true,
           vScrollCSS: "jqmScrollbar",
-          useJsScroll: !$.feat.nativeTouchScroll
+          useJsScroll: !$.feat.nativeTouchScroll,
+          noParent:$.feat.nativeTouchScroll
         });
         scrollers[obj.id].disable();
       });
@@ -90,7 +90,7 @@
     history: [],
     loadCurrent: function() {
       var div = this.container.find(".default");
-      div.css("-webkit-transform", "translate3d(0,0,0)");
+      div.css("-webkit-transform", "none");
       div.show();
       this.currentDiv = div.get();
       if (scrollers[this.currentDiv.id]) scrollers[this.currentDiv.id].enable();
