@@ -1,4 +1,4 @@
-App Framework
+App Framework!
 =========
 
 This is the officialy community repository for App Framework plugins.  Anyone can fork this repository and create a pull request to have their plugin included.  Plugins submitted are bound to the license and terms by the author.
