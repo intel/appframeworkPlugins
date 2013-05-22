@@ -11,6 +11,11 @@
         -webkit-transition-duration:300ms;
 		-webkit-overflow-scrolling:touch;
 }
+
+.insetPanel > * {
+-webkit-backface-visibility: hidden;
+-webkit-perspective: 1000;
+}
     
 .subpanelNav a {
         display:inline-block;

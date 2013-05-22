@@ -63,7 +63,7 @@
           verticalScroll: true,
           vScrollCSS: "jqmScrollbar",
           useJsScroll: !$.feat.nativeTouchScroll,
-          noParent:true
+          noParent:$.feat.nativeTouchScroll
         });
         scrollers[obj.id].disable();
       });
