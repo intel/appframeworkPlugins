@@ -4,11 +4,12 @@
         width:100%;
         display:none;
         position:absolute; top:0px; left:0px;
-		min-height:100%;
-        overflow:hidden;
+	height:100%;
+        overflow:auto;
         background:inherit;
         -webkit-perspective: 1000;
         -webkit-transition-duration:300ms;
+		-webkit-overflow-scrolling:touch;
 }
     
 .subpanelNav a {
