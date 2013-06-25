@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html><!--HTML5 doctype-->
+<html>
+<head>
+<title>alphaTable</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="./appframework.js"></script>
+<!-- include jq.desktopBrowsers.js on desktop browsers only -->
+
+
+<script type="text/javascript" charset="utf-8" src="./af.scroller.js"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="./af.alphatable.js"></script>
+  <script>
+if(!((window.DocumentTouch&&document instanceof DocumentTouch)||'ontouchstart' in window)){
+var script=document.createElement("script");
+script.src="http://cdn.jqmobi.com/touch.js";
+var tag=$("head").append(script);
+
+}
+</script>
+</head>
+<body>
+
+    <style>
+    #contentDIV .alphaItem {padding:5px;}
+    #contentDIV .alphaItem:nth-child(even) {background: #CCC}
+    #contentDIV .alphaItem:nth-child(odd) {background: #FFF}
+     .tableHeader {
+        background:blue;font-weight:bold;text-align:center;height:24px;
+        color:white;font-size:20px;line-height:24px;
+    }
+    </style>
+    <p>Scroll an alphabetical list like contacts</p>
+    <div id="listControl" style="margin-left:auto;margin-right:auto;position:absolute;top:40px;bottom:0px;left:0px;overflow:hidden;width:100%;padding-bottom:10px;">
+        <div id="contentDIV_container" style="width:100%;height:100%; background-color:white;overflow:hidden;">
+            <div id="contentDIV" style='color:black;overflow:hidden;'>
+                <div class="tableHeader" id="itm_anchor_A">A</div> 
+                
+                <li class='alphaItem' id="item1">These are all</li>
+                <div class='alphaItem' id="item2">sample entries that</div>
+                <div class='alphaItem' id="item3">could be DIVs or</div>
+                
+                <div class="tableHeader" id="itm_anchor_B">B</div> 
+                
+                <div class='alphaItem' id="item4">any sort of styled</div>
+                <div class='alphaItem' id="item5">entries you might wish</div>
+                <div class='alphaItem' id="item6">that way you don't have to</div>
+                <div class='alphaItem' id="item7">deal with all the crazy</div>
+                <div class='alphaItem' id="item8">CSS that is in iScroll.js</div>
+                
+                <div class="tableHeader" id="itm_anchor_C">C</div> 
+                <li class='alphaItem' id="testItem1">nec tincidunt lacus suscipit a</li>
+                <li class='alphaItem' id="testItem2">Morbi mollis dui vel urna </li>
+                <li class='alphaItem' id="testItem3">facilisis ut condimentum </li>
+                <li class='alphaItem' id="testItem4">mi ullamcorper</li>
+                <div class="tableHeader" id="itm_anchor_D">D</div> 
+                <li class='alphaItem' id="testItem5">Sed rhoncus mollis est</li>
+                <li class='alphaItem' id="testItem6">vitae vestibulum massa fringilla id</li>
+                <li class='alphaItem' id="testItem7">Vestibulum rhoncus lorem nec </li>
+                <li class='alphaItem' id="testItem8">Aenean volutpat nisi quis </li>
+                <div class="tableHeader" id="itm_anchor_E">E</div> 
+                <li class='alphaItem' id="testItem9">Pellentesque porttitor ornare</li>
+                <li class='alphaItem' id="testItem10">Aliquam luctus dui</li>
+                <li class='alphaItem' id="testItem11">Cras facilisis arcu ac </li>
+                <li class='alphaItem' id="testItem12">Sed id leo quis massa </li>
+                <li class='alphaItem' id="testItem13">Duis vitae elit vel eros </li>
+                <div class="tableHeader" id="itm_anchor_F">F</div> 
+                <li class='alphaItem' id="testItem14">Morbi sed purus enim</li>
+                <li class='alphaItem' id="testItem15">Nunc volutpat odio vulputate </li>
+                <li class='alphaItem' id="testItem16">Fusce id ligula erat</li>
+                <li class='alphaItem' id="testItem17">Vestibulum adipiscing </li>
+                <div class="tableHeader" id="itm_anchor_G">G</div> 
+                <li class='alphaItem' id="testItem18">Cras eu augue nec est </li>
+                <li class='alphaItem' id="testItem19">Cras sit amet neque </li>
+                <li class='alphaItem' id="testItem20">Mauris bibendum condimentum </li>
+            </div>
+        </div>
+    </div>
+    <script>
+    window.addEventListener("load",function(){
+    $("#contentDIV").scroller({useJsScroll:true});  
+    $("#contentDIV").alphatable($("#contentDIV").scroller(),{listCssClass:"tableListContainer",prefix:"itm_anchor_"});
+    
+    },false);
+    </script>
+    <style>
+    .tableListContainer {
+    position:absolute;top:10px;right:0px;width:20px;font-size:8pt;font-weight:bold;color:#000;opacity:.5;border-radius:5px;text-align:center;z-index:9999;border:1px solid black;background:#666;padding-top:5px;padding-bottom:5px;
+    }
+    </style>
+
+</body>
+</html>

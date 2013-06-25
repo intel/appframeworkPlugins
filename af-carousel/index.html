@@ -1,0 +1,65 @@
+<html>
+<script src="https://raw.github.com/01org/appframework/2.0/appframework.js"></script>
+<script src="af.carousel.js"></script>
+
+
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<body>
+		<style>
+		.carousel_paging2 {
+			border-radius: 10px;
+			
+			background: #ccc;
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+
+		.carousel_paging2_selected {
+			border-radius: 10px;
+			
+			background: #000;
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+
+		.spacer {
+			width: 10px;
+			float: left;
+		}
+
+		.carousel_content {
+			-webkit-transform: translate3d(0, 0, 0);
+		}
+		</style>
+		<script>
+		 var carousel;
+			function init_carousel() {
+				carousel=$("#carousel").carousel({
+					pagingDiv: "carousel_dots",
+					pagingCssName: "carousel_paging2",
+					pagingCssNameSelected: "carousel_paging2_selected",
+					preventDefaults:false,
+					wrap:true //Set to false to disable the wrap around
+				});
+			}
+			window.addEventListener("load", init_carousel, false);
+		
+		</script>
+			<div id="carousel_dots" style="text-align: center; margin:auto;  display : table; clear: both; position: relative; top: 40%; z-index: 200">
+			</div>
+			<div id="carousel" style="display:block;height:300px;width:100%;">
+					<div style="background: yellow;">
+						<a href="javascript:alert('test');">
+								I'm a horizontal carousel
+							</a>
+						</div>
+					<div style="background: green;"></div>
+					<div style="background: blue;"></div>
+					<div style="background: pink;"></div>
+				</div>
+			
+
+	</body>
+</html>

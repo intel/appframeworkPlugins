@@ -1,0 +1,52 @@
+<html>
+<link rel="stylesheet" type="text/css" href="af.tabs.css"  />
+<script src="https://raw.github.com/01org/appframework/2.0/appframework.js"></script>
+<script src="af.tabcontrol.js"></script>
+<style>
+.button {
+	display:inline-block;
+	text-decoration: none;
+	background:#ccc;
+	color:black;
+	border-radius: 5px;
+	text-align: center
+}
+li:not(:last-of-type){
+	border-right:1px solid black;
+}
+</style>
+<script>
+$(document).ready(function(){
+	$(".tabcontrol").tabcontrol();
+})
+</script>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<body>
+		<div class="tabcontrol">
+			<ul class="tabs" style="width:300px">
+				<li><a class="button" href="#main1">One</a></li>
+				<li><a class="button" href="#main2">Two</a></li>
+				<li><a class="button" href="#main3">Three</a></li>
+			</ul>
+			<ul class="tabs-content">
+				<li id="main1">
+					This is tab 1
+				</li>
+				<li id="main2" class="active">
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+					this is tab 2<br><br>
+				</li>
+				<li id="main3">
+					this is tab 3
+				</li>
+			</ul>
+		</div>
+
+	</body>
+</html>
