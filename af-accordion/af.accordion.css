@@ -1,8 +1,7 @@
-
 .accordion li>div {
 	opacity:0;
 
-	overflow:hidden;
+	overflow:auto;
 	height:0px;
 	-webkit-transition: opacity 0.30s  linear;
 	transition: opacity 0.30s  linear;
@@ -21,7 +20,9 @@
 	height:auto;
 	opacity:1;
 }
-
+.accordion li.active>div{
+	opacity:1;
+}
 .accordion li {
 	display:block;
 	width:100%;
