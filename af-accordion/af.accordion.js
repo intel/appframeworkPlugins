@@ -42,16 +42,21 @@
 
         $el.on("click","li",function(e){
 
-			var $e=$(e.target).siblings("div");
-			debugger;
-			$e.parent().addClass("active");
-			$el.find("li").not($e.parent().get(0)).removeClass("active");
-			var to=$e.height();
-			$e.css("height","0px");
-			window.setTimeout(function(){
-				$e.css("height",to);
-			});
-			e.preventDefault();
+		var $e = $(e.target).siblings("div");
+		$e.parent().addClass("active");
+		$el.find("li").not($e.parent().get(0)).removeClass("active");
+		$el.find("div").not($e.get(0)).css("height", "0px");
+		window.setTimeout(function () {
+		if ($e.get(0).clientHeight > 0)
+		    $e.css("height", "0");
+		else {
+		    var to = $e.data("height");
+		    if (to == null)
+		        to = "auto";
+		    $e.css("height", to);
+		}
+		});
+		e.preventDefault();
         });
 
 	}
