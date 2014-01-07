@@ -77,9 +77,9 @@
                 {
                     var myEl=data.splice(0,1);
                     myEl=$container.find(myEl);
-                    if(myEl.get()==el)
+                    if(myEl.get(0)==el)
                        continue;
-                    $el.append(myEl.get());
+                    $el.append(myEl.get(0));
                 }
                 if (this.horizontal) {
                     el.style.display = "block";
@@ -349,7 +349,6 @@
                 el.style[$.feat.cssPrefix+"Transform"] = "translate" + translateOpen + distanceToMove.x + "px," + distanceToMove.y + "px" + translateClose;
                 el.style[$.feat.cssPrefix+"TransitionDuration"] = time + "ms";
                 el.style[$.feat.cssPrefix+"BackfaceVisibility"] = "hidden";
-                el.style[$.feat.cssPrefix+"TransformStyle"] = "preserve-3d";
                 el.style[$.feat.cssPrefix+"TransitionTimingFunction"] = timingFunction;
             },
 
